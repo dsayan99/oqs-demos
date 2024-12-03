@@ -6,7 +6,7 @@ This directory contains a Dockerfile that builds nginx using OpenSSL3 with the [
 
 [Install Docker](https://docs.docker.com/install) and run the following commands in this directory:
 
-1. `docker build -t oqs-nginx .` This will generate the image with a default QSC algorithm built-in (dilithium3 -- see Build options below to change this).
+1. `docker build -t oqs-nginx .` This will generate the image with a default rsa:2048 algorithm.
 <!-- 2. `docker run --detach --rm --name oqs-nginx -p 4433:4433 oqs-nginx` will start up the resulting container with QSC-enabled nginx running and listening for TLS 1.3 connections on port 4433. -->
 2. `docker run -it oqs-nginx` will open the terminal inside the docker container.
 3. `nginx -c nginx-conf/nginx.conf -g "daemon off;"` will start the server on the defined port in the `nginx-conf\nginx.conf` file.
